@@ -1,0 +1,4 @@
+Name: switchTheme
+Description: Switches light and dark theme
+Binding: switchTheme
+Interactive: false
