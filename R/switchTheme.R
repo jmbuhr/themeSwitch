@@ -12,8 +12,8 @@ NULL
 
 #' switchTheme
 #'
-#' This funcions checks if the current theme is `Tomorrow Night`. If this
-#' is the case, it changes the theme to the default theme (`Textmate`).
+#' This funcions checks if the current theme is `...`. If this
+#' is the case, it changes the light variant (`...`).
 #' Likewise, the theme is changed to the dark one if it wasn't previously.
 #'
 #' @return
@@ -24,9 +24,9 @@ NULL
 #' # Use the addins browser or activate via the addins menue to switch between themes.
 #'
 switchTheme <- function(){
-  if (rstudioapi::getThemeInfo()$editor == "Tomorrow Night") {
+  if (rstudioapi::getThemeInfo()$dark) {
     rstudioapi::applyTheme("Textmate (default)")
   } else {
-    rstudioapi::applyTheme("Tomorrow Night")
+    rstudioapi::applyTheme("rscodeio")
   }
 }

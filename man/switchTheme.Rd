@@ -7,8 +7,8 @@
 switchTheme()
 }
 \description{
-This funcions checks if the current theme is `Tomorrow Night`. If this
-is the case, it changes the theme to the default theme (`Textmate`).
+This funcions checks if the current theme is `...`. If this
+is the case, it changes the light variant (`...`).
 Likewise, the theme is changed to the dark one if it wasn't previously.
 }
 \examples{
