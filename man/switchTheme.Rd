@@ -12,8 +12,9 @@ is the case, it changes to the light variant.
 Likewise, the theme is changed to the dark one if it wasn't previously.
 }
 \details{
-Use configureDarkTheme and configureLightTheme to set
-the environment variables for your preferred themes
+You need the environment variables RSTUDIO_LIGHT_THEME
+and RSTUDIO_DARK_THEME in your .Renviron file.
+Run `usethis::edit_r_environ()` to edit it.
 }
 \examples{
 # Use the addins browser or activate via the addins menue to switch between themes.

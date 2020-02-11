@@ -16,8 +16,9 @@ NULL
 #' is the case, it changes to the light variant.
 #' Likewise, the theme is changed to the dark one if it wasn't previously.
 #'
-#' Use configureDarkTheme and configureLightTheme to set
-#' the environment variables for your preferred themes
+#' You need the environment variables RSTUDIO_LIGHT_THEME
+#' and RSTUDIO_DARK_THEME in your .Renviron file.
+#' Run `usethis::edit_r_environ()` to edit it.
 #'
 #' @return
 #' NULL
@@ -28,8 +29,7 @@ NULL
 #'
 switchTheme <- function(){
   e <- function(e) {
-  stop("Could not apply theme, please refer to themeSwitch::configureDarkTheme()
-            and themeSwitch::configureLightTheme() to set the environment variables")
+  stop("Could not apply theme, please set the environment variables. See getEditorTheme()")
   }
   if (rstudioapi::getThemeInfo()$dark) {
     tryCatch({
@@ -42,27 +42,27 @@ switchTheme <- function(){
   }
 }
 
-
-#' Configure current theme as dark theme
+#' Get current editor theme
 #'
-#' Uses an environment variable RSTUDIO_DARK_THEME
+#' Use this to find your current theme
+#' and get help on setting the
+#' the environment variables
+#' RSTUDIO_DARK_THEME and RSTUDIO_LIGHT_THEME
 #'
-#' @return
-#' @export
-#'
-#' @examples
-configureDarkTheme <- function() {
-  Sys.setenv(RSTUDIO_DARK_THEME = rstudioapi::getThemeInfo()$editor)
-}
-
-#' Configure current theme as light theme
-#'
-#' Uses an environment variable RSTUDIO_LIGHT_THEME
+#' Run it twice - once in dark mode, once with
+#' a light theme - and follow the instructions
+#' in the console.
 #'
 #' @return
 #' @export
 #'
 #' @examples
-configureLightTheme <- function() {
-  Sys.setenv(RSTUDIO_LIGHT_THEME = rstudioapi::getThemeInfo()$editor)
+getEditorTheme <- function() {
+  message("Add this to your .Renviron. Tip: usethis::edit_r_environ()")
+  if (rstudioapi::getThemeInfo()$dark) {
+    cat("RSTUDIO_DARK_THEME =" ,rstudioapi::getThemeInfo()$editor)
+  } else {
+    cat("RSTUDIO_LIGHT_THEME =" ,rstudioapi::getThemeInfo()$editor)
+  }
 }
+

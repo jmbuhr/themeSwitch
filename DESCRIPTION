@@ -13,3 +13,5 @@ LazyData: true
 Imports: 
     rstudioapi
 RoxygenNote: 7.0.2
+Suggests: 
+    usethis
