@@ -3,7 +3,6 @@
 \docType{package}
 \name{foo}
 \alias{foo}
-\alias{foo-package}
 \title{themeSwitch}
 \description{
 Let's you switch themes at the press of a button.

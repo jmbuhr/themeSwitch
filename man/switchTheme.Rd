@@ -7,9 +7,13 @@
 switchTheme()
 }
 \description{
-This funcions checks if the current theme is `...`. If this
-is the case, it changes the light variant (`...`).
+This funcions checks if the current theme is dark. If this
+is the case, it changes to the light variant.
 Likewise, the theme is changed to the dark one if it wasn't previously.
+}
+\details{
+Use configureDarkTheme and configureLightTheme to set
+the environment variables for your preferred themes
 }
 \examples{
 # Use the addins browser or activate via the addins menue to switch between themes.
