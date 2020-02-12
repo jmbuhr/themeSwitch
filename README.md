@@ -1,5 +1,8 @@
 # themeSwitch
 
+> Note: This package still works but https://github.com/gadenbuie/rsthemes provides
+  the same functionality and more, so I will not develope it further for now.
+
 Switch your RStudio theme at the press of a button.
 
 install via
